@@ -19,7 +19,8 @@ func main() {
 	// 读取环境变量
 	githubClientId := os.Getenv("github_client_id")
 	githubClientSecret := os.Getenv("github_client_secret")
-	githubCallbackUrl := os.Getenv("github_callback_url")
+	//githubCallbackUrl := os.Getenv("github_callback_url")
+	githubCallbackUrl := ""
 	oauth.SetupGithubHandler(githubClientId, githubClientSecret, githubCallbackUrl)
 	linuxDoClientId := os.Getenv("linuxdo_client_id")
 	linuxDoClientSecret := os.Getenv("linuxdo_client_secret")

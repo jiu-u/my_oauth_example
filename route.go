@@ -19,9 +19,9 @@ func SetupRoutes(r *gin.Engine) {
 	})
 	// github
 	r.GET("/login/github", oauth.GithubOauthHandler.Redirect2Oauth)
-	r.GET("/oauth2/github/callback", oauth.GithubOauthHandler.GetCallback)
+	r.GET("v1/auth/oauth2/github/callback", oauth.GithubOauthHandler.GetCallback)
 	// linux do
 	r.GET("/login/linuxdo", oauth.LinuxDoOauthHandler.Redirect2Oauth)
-	r.GET("/oauth2/linuxdo/callback", oauth.LinuxDoOauthHandler.GetCallback)
+	r.GET("/v1/auth/oauth2/linux_do/callback", oauth.LinuxDoOauthHandler.GetCallback)
 	// ...
 }
